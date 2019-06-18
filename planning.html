@@ -1,0 +1,379 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Study Website - Home</title>
+    <link href="css/home.css" rel="stylesheet" type="text/css">
+    <link href="css/pop.css" rel="stylesheet" type="text/css">
+    <!-- Warning script (commented out) 
+<script type="text/javascript" src="js/fakie.js"></script> -->
+    <link href="css/jsgantt.css" rel="stylesheet" type="text/css" />
+    <script src="js/jsgantt.js" type="text/javascript"></script>
+</head>
+
+<body class="body">
+    <div class="container">
+        <header>
+            <div class="primary_header">
+                <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+            </div>
+            <nav class="secondary_header" id="menu">
+                <ul>
+                    <a href="index.html">
+                        <li>home</li>
+                    </a>
+                    <a href="about.html">
+                        <li>About Animation</li>
+                    </a>
+                    <a href="game.html">
+                        <li>Game</li>
+                    </a>
+                    <a href="error.html">
+                        <li>Error</li>
+                    </a>
+                    <a href="error.html">
+                        <li>Error</li>
+                    </a>
+                    <a href="planning.html">
+                        <li>Planning</li>
+                    </a>
+                </ul>
+            </nav>
+        </header>
+        <section>
+            <h2 class="noDisplay">Main Content</h2>
+            <article class="left_article">
+                <h2>Planning</h2>
+                <br><br><br><br><br><br><br><br><br><br><br><br>
+                <h2>Gnatt Chart</h2>
+                <div style="position:relative" class="gantt" id="GanttChartDIV"></div>
+                <!-- Script Documented in my ideas page [https://github.com/jsGanttImproved] -->
+                <script>
+                    var g = new JSGantt.GanttChart(document.getElementById('GanttChartDIV'), 'day');
+
+                    g.setOptions({
+                        vCaptionType: 'Complete', // Set to Show Caption : None,Caption,Resource,Duration,Complete,     
+                        vQuarterColWidth: 36,
+                        vDateTaskDisplayFormat: 'day dd month yyyy', // Shown in tool tip box
+                        vDayMajorDateDisplayFormat: 'mon yyyy - Week ww', // Set format to dates in the "Major" header of the "Day" view
+                        vWeekMinorDateDisplayFormat: 'dd mon', // Set format to display dates in the "Minor" header of the "Week" view
+                        vLang: 'en',
+                        vShowTaskInfoLink: 1, // Show link in tool tip (0/1)
+                        vShowEndWeekDate: 0, // Show/Hide the date for the last day of the week in header for daily
+                        vAdditionalHeaders: { // Add data columns to your table
+                            category: {
+                                title: 'Category'
+                            },
+                        },
+                        vUseSingleCell: 10000, // Set the threshold cell per table row (Helps performance for large data.
+                        vFormatArr: ['Day', 'Week', 'Month'], // Even with setUseSingleCell using Hour format on such a large chart can cause issues in some browsers,
+
+                    });
+
+                    // Task 1
+                    g.AddTaskItemObject({
+                        pID: 1,
+                        pName: "Planning and Ideas",
+                        pStart: "2019-04-19",
+                        pEnd: "2019-05-07",
+                        pPlanStart: "2019-04-19",
+                        pPlanEnd: "2019-05-03 12:00",
+                        pClass: "gtaskblue",
+                        pLink: "",
+                        pMile: 0,
+                        pRes: "OneNote",
+                        pComp: 100,
+                        pGroup: 1,
+                        pParent: 0,
+                        pOpen: 0,
+                        pDepend: "",
+                        pCaption: "",
+                        pCost: 1000,
+                        pNotes: "Working out the main ideas i wish to implement into to the website. Keeping things organised on OneNote.",
+                        category: "Ideas"
+                            // sector: "Planning"
+                    });
+                    // Task 1.2
+                    g.AddTaskItemObject({
+                        pID: 2,
+                        pName: "Animating",
+                        pStart: "2019-04-19",
+                        pEnd: "2019-05-07",
+                        pPlanStart: "2019-04-19",
+                        pPlanEnd: "2019-05-03 12:00",
+                        pClass: "gtaskred",
+                        pLink: "",
+                        pMile: 0,
+                        pRes: "Adobe",
+                        pComp: 75,
+                        pGroup: 0,
+                        pParent: 1,
+                        pOpen: 1,
+                        pDepend: "",
+                        pCaption: "",
+                        pCost: 1000,
+                        pNotes: "Create Animations that will be implemented into the website. Using resources such as Adobe Animate, Photoshop and Premier",
+                        category: "Ideas"
+                    });
+                    // Task 1.1
+                    g.AddTaskItemObject({
+                        pID: 3,
+                        pName: "Interactivity",
+                        pStart: "2019-05-10",
+                        pEnd: "2019-06-09",
+                        pPlanStart: "2019-05-10",
+                        pPlanEnd: "2019-05-03",
+                        pClass: "gtaskblue",
+                        pLink: "",
+                        pMile: 0,
+                        pRes: "OneNote",
+                        pComp: 70,
+                        pGroup: 0,
+                        pParent: 1,
+                        pOpen: 1,
+                        pDepend: "",
+                        pCaption: "",
+                        pCost: 1000,
+                        pNotes: "This co-insides with animating and planning. I spent this time deciding how i wanted to implment certain interactive elements into my site.",
+                        category: "Ideas"
+                    });
+                    // Task 4
+                    g.AddTaskItemObject({
+                        pID: 4,
+                        pName: "Learning Website design tools",
+                        pStart: "2019-05-10",
+                        pEnd: "2019-06-09",
+                        pPlanStart: "2019-05-10",
+                        pPlanEnd: "2019-05-03",
+                        pClass: "gtaskgreen",
+                        pLink: "",
+                        pMile: 0,
+                        pRes: "OneNote",
+                        pComp: 100,
+                        pGroup: 1,
+                        pParent: 0,
+                        pOpen: 0,
+                        pDepend: "",
+                        pCaption: "",
+                        pCost: 1000,
+                        pNotes: "This co-insides with animating and planning. I spent this time deciding how i wanted to implment certain interactive elements into my site.",
+                        category: "Learning"
+                    });
+                    // Task 4.1
+                    g.AddTaskItemObject({
+                        pID: 5,
+                        pName: "Dreamweaver",
+                        pStart: "2019-04-19",
+                        pEnd: "2019-05-01",
+                        pPlanStart: "2019-04-19",
+                        pPlanEnd: "2019-06-18",
+                        pClass: "gtaskgreen",
+                        pLink: "",
+                        pMile: 0,
+                        pRes: "OneNote",
+                        pComp: 100,
+                        pGroup: 0,
+                        pParent: 4,
+                        pOpen: 0,
+                        pDepend: "",
+                        pCaption: "",
+                        pCost: 1000,
+                        pNotes: "Dreamweaver was recommended to me as we were learning how to use it in class. I found it useful beacuse i could see what i was doing in real time.",
+                        category: "Learning",
+                        sector: "Planning"
+                    });
+                    // Task 4.2
+                    g.AddTaskItemObject({
+                        pID: 6,
+                        pName: "Notepad++",
+                        pStart: "2019-04-19",
+                        pEnd: "2019-04-20",
+                        pPlanStart: "2019-04-19",
+                        pPlanEnd: "2019-06-18",
+                        pClass: "gtaskgreen",
+                        pLink: "",
+                        pMile: 0,
+                        pRes: "OneNote",
+                        pComp: 100,
+                        pGroup: 0,
+                        pParent: 4,
+                        pOpen: 0,
+                        pDepend: "",
+                        pCaption: "",
+                        pCost: 1000,
+                        pNotes: "I use to use notepad it is very good and easy to use, shortcuts are easy to remember although it isn't practicle for this task.",
+                        category: "Learning"
+
+                    });
+                    // Task 4.3
+                    g.AddTaskItemObject({
+                        pID: 7,
+                        pName: "VS Code",
+                        pStart: "2019-05-01",
+                        pEnd: "2019-06-18",
+                        pPlanStart: "2019-05-01",
+                        pPlanEnd: "2019-06-18",
+                        pClass: "gtaskgreen",
+                        pLink: "",
+                        pMile: 0,
+                        pRes: "OneNote",
+                        pComp: 100,
+                        pGroup: 0,
+                        pParent: 4,
+                        pOpen: 0,
+                        pDepend: "",
+                        pCaption: "",
+                        pCost: 1000,
+                        pNotes: "Dreamweaver was recommended to me as we were learning how to use it in class. I found it useful beacuse i could see what i was doing in real time.",
+                        category: "Learning"
+                    });
+                    // Task 5
+                    g.AddTaskItemObject({
+                        pID: 8,
+                        pName: "Website Building",
+                        pStart: "2019-04-19",
+                        pEnd: "2019-06-19",
+                        pPlanStart: "2019-04-19",
+                        pPlanEnd: "2019-06-17",
+                        pClass: "gtaskpurple",
+                        pLink: "",
+                        pMile: 0,
+                        pRes: "VS Code",
+                        pComp: 95,
+                        pGroup: 1,
+                        pParent: 0,
+                        pOpen: 0,
+                        pDepend: "",
+                        pCaption: "",
+                        pCost: 1000,
+                        pNotes: "Activily developing HTMl CSS and JS for the core of the website.",
+                        category: "Building"
+                    });
+                    // Task 5.1
+                    g.AddTaskItemObject({
+                        pID: 9,
+                        pName: "HTML Pages",
+                        pStart: "2019-04-19",
+                        pEnd: "2019-06-19",
+                        pPlanStart: "2019-04-19",
+                        pPlanEnd: "2019-06-17",
+                        pClass: "gtaskpurple",
+                        pLink: "",
+                        pMile: 0,
+                        pRes: "VS Code",
+                        pComp: 80,
+                        pGroup: 0,
+                        pParent: 8,
+                        pOpen: 0,
+                        pDepend: "",
+                        pCaption: "",
+                        pCost: 1000,
+                        pNotes: "Building off a template to create the basic format",
+                        category: "Building"
+                    });
+                    // Task 5.2
+                    g.AddTaskItemObject({
+                        pID: 10,
+                        pName: "CSS Backend",
+                        pStart: "2019-04-19",
+                        pEnd: "2019-06-01",
+                        pPlanStart: "2019-04-19",
+                        pPlanEnd: "2019-06-08",
+                        pClass: "gtaskpurple",
+                        pLink: "",
+                        pMile: 0,
+                        pRes: "VS Code",
+                        pComp: 100,
+                        pGroup: 0,
+                        pParent: 8,
+                        pOpen: 0,
+                        pDepend: "",
+                        pCaption: "",
+                        pCost: 1000,
+                        pNotes: "Working along side HTML Pages to develop the look and feel wof the website",
+                        category: "Building"
+                    });
+                    // Task 5.3
+                    g.AddTaskItemObject({
+                        pID: 11,
+                        pName: "JavaScript",
+                        pStart: "2019-04-19",
+                        pEnd: "2019-06-19",
+                        pPlanStart: "2019-04-19",
+                        pPlanEnd: "2019-06-17",
+                        pClass: "gtaskpurple",
+                        pLink: "",
+                        pMile: 0,
+                        pRes: "VS Code",
+                        pComp: 100,
+                        pGroup: 0,
+                        pParent: 8,
+                        pOpen: 0,
+                        pDepend: "",
+                        pCaption: "",
+                        pCost: 1000,
+                        pNotes: "Creating Js to create things like this",
+                        category: "Building"
+                    });
+                    // Feasibility Study
+                    g.AddTaskItemObject({
+                        pID: 12,
+                        pName: "Feasibility Study",
+                        pStart: "2019-05-01",
+                        pEnd: "2019-06-18",
+                        pPlanStart: "2019-04-19",
+                        pPlanEnd: "2019-05-01",
+                        pClass: "gtaskyellow",
+                        pLink: "",
+                        pMile: 0,
+                        pRes: "Word",
+                        pComp: 95,
+                        pGroup: 1,
+                        pParent: 0,
+                        pOpen: 1,
+                        pDepend: "",
+                        pCaption: "",
+                        pCost: 1000,
+                        pNotes: "write a feasibility study which considers the following constraints. • Technical • Economic • Scheduling • Operational ",
+                        category: "Theory"
+                    });
+                    g.Draw();
+                </script>
+                <h2></h2>
+                <p></p>
+            </article>
+            <aside>
+                <p>Para</p>
+                <aside class="right_article">
+                    <div class="popup" onclick="myFunction()"><img src="images/heath.gif" alt="Heath.gif" width="400" height="300"><span class="popuptext" id="myPopup">THIS HURTS MY EYES TOO!</span></div><br><br>
+                    <img src="images/Catenary_animation.gif" alt="elephant.gif" width="400" height="300">
+                    <audio src="music/Life_of_Riley.mp3" controls>
+          <!--Unsupported browsers will see this message-->
+          <p>If you are reading this, it is because your browser does not support the audio element.</p>
+          </audio>
+                    <p>Life of Riley</p>
+                </aside>
+
+        </section>
+        <div class="row blockDisplay">
+            <div class="column_half left_half">
+                <a href="error.html" target="_blank">
+                    <h2 class="column_title">This works 100%</h2>
+                </a>
+            </div>
+            <div class="column_half right_half">
+                <a href="useless.html" target="_blank">
+                    <h2 class="column_title">My Useless Web</h2>
+                </a>
+            </div>
+        </div>
+        <footer class="secondary_header footer">
+            <div class="copyright">&copy;2019 - <strong>Study Website - Heath</strong></div>
+        </footer>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,108 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Study Website - Home</title>
+    <link href="css/home.css" rel="stylesheet" type="text/css">
+    <link href="css/pop.css" rel="stylesheet" type="text/css">
+    <script>
+        // When the user clicks on <div>, open the popup
+        function myFunction() {
+            var popup = document.getElementById("myPopup");
+            popup.classList.toggle("show");
+        }
+    </script>
+    <!-- Warning script (commented out) 
+<script type="text/javascript" src="js/fakie.js"></script> -->
+</head>
+
+<body class="body">
+    <div class="container">
+        <header>
+            <div class="primary_header">
+                <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+            </div>
+            <nav class="secondary_header" id="menu">
+                <ul>
+                    <a href="index.html">
+                        <li>home</li>
+                    </a>
+                    <a href="about.html">
+                        <li>About Animation</li>
+                    </a>
+                    <a href="game.html">
+                        <li>Game</li>
+                    </a>
+                    <a href="error.html">
+                        <li>Error</li>
+                    </a>
+                    <a href="error.html">
+                        <li>Error</li>
+                    </a>
+                    <a href="planning.html">
+                        <li>Planning</li>
+                    </a>
+                </ul>
+            </nav>
+        </header>
+        <section>
+            <!-- MAIN CONTENT-->
+            <article class="left_article">
+                <h2>Animations</h2>
+                <p>Animation is a method in which pictures are manipulated to appear as moving images. Today, most animations are made with computer-generated imagery (CGI). Computer animation can be very detailed 3D animation, while 2D computer animation
+                    can be used for stylistic reasons, low bandwidth or faster real-time renderings. Other common animation methods apply a stop motion technique to two and three-dimensional objects like paper cutouts, puppets or clay figures.</p>
+                <h1>Vector Based Animations</h1>
+                <p>Vector animation is a term used to refer to animation in which the art or motion is controlled by vectors rather than pixels. Vector animation often allows cleaner, smoother animation because images are displayed and resized using mathematical
+                    values instead of stored pixel values.</p>
+                <h1>Cell Based Animations</h1>
+                <p>Cell animations are created by placing similar frames in sequential order. Generally cell animations create movement by showing 24 frames per second. It's common to draw a frame by placing a blank sheet (cell) over the previous frame;
+                    this is done to create a smoother movement in between frames.</p>
+                <img src="images/elethant.gif" alt="elephant.gif" width="400" height="300">
+                <img src="images/face.gif" alt="face.gif" width="400" height="300">
+                <h1>Rotoscoping</h1>
+                <p>Rotoscoping is a technique patented by Max Fleischer in 1917 where animators trace live-action movement, frame by frame. The source film can be directly copied from actors' outlines into animated drawings.</p>
+                <h1>Live-action/animation</h1>
+                <p>Live-action/animation is a technique combining hand-drawn characters into live action shots or live action actors into animated shots. One of the earlier uses was in Koko the Clown when Koko was drawn over live action footage.</p>
+                <h1>Stop motion animation</h1>
+                <p>Stop-motion animation is used to describe animation created by physically manipulating real-world objects and photographing them one frame of film at a time to create the illusion of movement. There are many different types of stop-motion
+                    animation, usually named after the medium used to create the animation. Computer software is widely available to create this type of animation; traditional stop motion animation is usually less expensive but more time-consuming to
+                    produce than current computer animation.</p>
+                <h1>3D animation</h1>
+                <p>3D animation is digitally modeled and manipulated by an animator. The animator usually starts by creating a 3D polygon mesh to manipulate. A mesh typically includes many vertices that are connected by edges and faces, which give the visual
+                    appearance of form to a 3D object or 3D environment. Sometimes, the mesh is given an internal digital skeletal structure called an armature that can be used to control the mesh by weighting the vertices. This process is called rigging
+                    and can be used in conjunction with keyframes to create movement.</p>
+                <center><iframe width="560" height="315" src="https://www.youtube.com/embed/n_EHTNa2tIk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></article>
+            </center>
+            </article>
+            <aside class="right_article">
+                <div class="popup" onclick="myFunction()"><img src="images/heath.gif" alt="Heath.gif" width="400" height="300"><span class="popuptext" id="myPopup">THIS HURTS MY EYES TOO!</span></div><br><br>
+                <audio src="music/Life_of_Riley.mp3" controls>
+        <!--Unsupported browsers will see this message-->
+        <p>If you are reading this, it is because your browser does not support the audio element.</p>
+        </audio>
+                <img src="images/werewolf.gif" alt="werewolf.gif" width="400" height="300">
+            </aside>
+
+        </section>
+        <div class="row blockDisplay">
+            <div class="column_half left_half">
+                <a href="error.html" target="_blank">
+                    <h2 class="column_title">This works 100%</h2>
+                </a>
+            </div>
+            <div class="column_half right_half">
+                <a href="useless.html" target="_blank">
+                    <h2 class="column_title">My Useless Web</h2>
+                </a>
+            </div>
+        </div>
+        <footer class="secondary_header footer">
+            <div class="copyright">&copy;2019 - <strong>Study Website - Heath</strong></div>
+        </footer>
+    </div>
+</body>
+
+</html>

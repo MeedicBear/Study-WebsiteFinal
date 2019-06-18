@@ -1,0 +1,31 @@
+.side .md [href="#fly"] {
+    position: fixed;
+    top: 50%;
+    left: 100%;
+    height: 112px;
+    width: 150px;
+    background: url(../images/weed.png);
+    background-size: 100% 100%;
+    -webkit-animation: fly 10s linear infinite;
+    animation: fly 10s linear infinite;
+}
+
+@-webkit-keyframes fly {
+    0% {
+        left: 100%;
+    }
+    70%,
+    100% {
+        left: -100px;
+    }
+}
+
+@keyframes fly {
+    0% {
+        left: 100%;
+    }
+    70%,
+    100% {
+        left: -100px;
+    }
+}
